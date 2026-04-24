@@ -1,15 +1,13 @@
 # nix-config
 
-NixOS configuration for `mini-s12`.
+NixOS config for `mini-s12`.
 
-## Files
+## Deploy
+`./scripts/rebuild.sh`
 
-- `configuration.nix` — system configuration
-- `hardware-configuration.nix` — generated hardware config
-- `rebuild.sh` — sync config to the host and run `nixos-rebuild switch`
+## Update nixpkgs
+`nix flake update && ./scripts/rebuild.sh`
 
-## Usage
-
-```sh
-./rebuild.sh
-```
+## Bootstrap
+On a fresh install, copy `hardware-configuration.nix` from the new host into this repo 
+and run `./rebuild.sh` from a machine with `nixos-rebuild` + flakes.
