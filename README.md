@@ -1,6 +1,6 @@
 # nix-config
 
-NixOS config for `mini-s12`.
+NixOS config for `spectra`.
 
 ## Deploy
 `./scripts/rebuild.sh`
@@ -10,4 +10,4 @@ NixOS config for `mini-s12`.
 
 ## Bootstrap
 On a fresh install, copy `hardware-configuration.nix` from the new host into this repo 
-and run `./rebuild.sh` from a machine with `nixos-rebuild` + flakes.
+and run `./scripts/rebuild.sh` from a machine with `nixos-rebuild` + flakes.
